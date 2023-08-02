@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Assent Of The Brain</title>
+  <link rel="icon" type="image/x-icon" href="brain.ico">
+  <style>
+    /* Import Google font - Poppins */
+
+
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      height: 100%;
+      width: 260px;
+      background: #11101d;
+      padding: 15px;
+      z-index: 99;
+    }
+
+    .logo {
+      font-size: 25px;
+      padding: 0 15px;
+    }
+
+    .sidebar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .menu-content {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      margin-top: 40px;
+      overflow-y: scroll;
+    }
+
+    .menu-content::-webkit-scrollbar {
+      display: none;
+    }
+
+    .menu-items {
+      height: 100%;
+      width: 100%;
+      list-style: none;
+      transition: all 0.4s ease;
+    }
+
+    .submenu-active .menu-items {
+      transform: translateX(-56%);
+    }
+
+    .menu-title {
+      color: #fff;
+      font-size: 14px;
+      padding: 15px 20px;
+    }
+
+    .item a,
+    .submenu-item {
+      padding: 16px;
+      display: inline-block;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .item i {
+      font-size: 12px;
+    }
+
+    .item a:hover,
+    .submenu-item:hover,
+    .submenu .menu-title:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .submenu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .submenu {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      right: calc(-100% - 26px);
+      height: calc(100% + 100vh);
+      background: #11101d;
+      display: none;
+    }
+
+    .show-submenu~.submenu {
+      display: block;
+    }
+
+    .submenu .menu-title {
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .submenu .menu-title i {
+      margin-right: 10px;
+    }
+
+    .navbar,
+    .main {
+      left: 260px;
+      width: calc(100% - 260px);
+      transition: all 0.5s ease;
+      z-index: 1000;
+    }
+
+    .sidebar.close~.navbar,
+    .sidebar.close~.main {
+      left: 0;
+      width: 100%;
+    }
+
+    .navbar {
+      position: fixed;
+      color: #fff;
+      padding: 15px 20px;
+      font-size: 25px;
+      background: #1583b6;
+      cursor: pointer;
+    }
+
+    .navbar #sidebar-close {
+      cursor: pointer;
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      z-index: 100;
+      background: url(Pixelart4.gif)
+    }
+
+    .main h1 {
+      color: #89a80a;
+      font-size: 40px;
+      text-align: center;
+    }
+
+    mark {
+  background-color: rgb(0, 132, 255);
+  color: rgb(255, 170, 170);
+}
+
+#PUB {
+  color: rgb(204, 128, 255);
+}
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="sidebar">
+    <a href="index.html" class="logo">Assent Of Brain</a>
+    <div class="menu-content">
+      <ul class="menu-items">
+        <div class="menu-title">Menu des Quizz</div>
+        <li class="item">
+          <a href="Propos.html">Règles</a>
+        </li>
+        <li class="item">
+          <div class="submenu-item">
+            <span>Catégorie jeux-vidéos</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+              <i class="fa-solid fa-chevron-left"></i>
+              Retour
+            </div>
+            <li class="item">
+              <a href="Quizz1.html">1er Quizz</a>
+            </li>
+            <li class="item">
+              <a href="Quizz3.html">2e Quizz</a>
+            </li>
+            <li class="item">
+              <a href="Quizz5.html">3e Quizz</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <div class="submenu-item">
+            <span>Autres</span>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <ul class="menu-items submenu">
+            <div class="menu-title">
+              <i class="fa-solid fa-chevron-left"></i>
+              Retour
+            </div>
+            <li class="item">
+              <a href="Quizz2.html">Quizz Histoire/Géographie</a>
+            </li>
+            <li class="item">
+              <a href="Quizz4.html">Quizz Musique</a>
+            </li>
+            <li class="item">
+              <a href="Quizz6.html">Quizz Cinéma</a>
+            </li>
+            <li class="item">
+              <a href="Quizz7.html">Quizz Animaux</a>
+            </li>
+            <li class="item">
+              <a href="Memoire.html">Jeu de mémoire</a>
+            </li>
+            <li class="item">
+              <a href="https://lmc60.github.io/Gerranite.html", id="PUB">PUB : Jouer a Tetris, Pong, Snake etc...</a>
+            </li>
+
+          </ul>
+    </div>
+  </nav>
+  <nav class="navbar">
+    <i class="fa-solid fa-bars" id="sidebar-close"></i>
+  </nav>
+  <main class="main"><h1><mark>
+    <div class="info-list">
+      <div class="info">1. Vous avez 15 secondes pour répondre aux questions.</div>
+      <div class="info">2. Une fois que vous avez sélectionné votre réponse, elle ne peut plus être annulée.</div>
+      <div class="info">3. Vous ne pouvez sélectionner aucune option une fois que le temps s'est écoulé.</div>
+      <div class="info">4. Vous ne pouvez pas quitter le quizz pendant que vous jouez.</div>
+      <div class="info">5. Vous obtiendrez des points en fonction de vos bonnes réponses.</div>
+  </div></mark>
+</h1>
+  </main>
+
+
+  <script>const sidebar = document.querySelector(".sidebar");
+    const sidebarClose = document.querySelector("#sidebar-close");
+    const menu = document.querySelector(".menu-content");
+    const menuItems = document.querySelectorAll(".submenu-item");
+    const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+    sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+    menuItems.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        menu.classList.add("submenu-active");
+        item.classList.add("show-submenu");
+        menuItems.forEach((item2, index2) => {
+          if (index !== index2) {
+            item2.classList.remove("show-submenu");
+          }
+        });
+      });
+    });
+    subMenuTitles.forEach((title) => {
+      title.addEventListener("click", () => {
+        menu.classList.remove("submenu-active");
+      });
+    });
+  </script>
+</body>
+
+</html>
