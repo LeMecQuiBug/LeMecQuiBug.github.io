@@ -3,7 +3,7 @@ let questions = [
     {
     numb: 1,
     question: "En combien d'exemplaires Minecraft s'est t-il vendu? Difficulté : Difficile",
-    answer: "≈238000000",
+    answer: "≈300000000",
     options: [
       "≈238000000",
       "≈300000000",
